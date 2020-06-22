@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: mypod
+ labels:
+  env: testing
+spec:
+ containers:
+ - name: deploy-env
+   image: souvikdutta7012/website:v1
+   volumeMounts:
+    - name: mywebpvc
+      mountPath: "/var/log/httpd/"
+ volumes:
+ - name: mywebpvc
+   persistentVolumeClaim:
+    claimName: mywebpvc
