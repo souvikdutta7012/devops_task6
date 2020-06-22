@@ -5,8 +5,8 @@ sender_email = "sdanime1999@gmail.com"
 receiver_email = "souvikdutta7012@gmail.com"
 password = input("Enter you password:")
 message = """\
-Subject: Congratulations
-Your model has been trained with accuracy more than 80%."""
+Subject: Warning
+Opps!!!Somethig is wrong."""
 
 context = ssl.create_default_context()
 with smtplib.SMTP(smtp_server, port) as server:
